@@ -233,8 +233,10 @@ public abstract class NPCBase implements NPC, NPCPacketHandler {
     }
 
     public boolean inViewOf(Player player) {
-        Vector dir = location.toVector().subtract(player.getEyeLocation().toVector()).normalize();
-        return dir.dot(player.getEyeLocation().getDirection()) >= cosFOV;
+        // skip check
+        //Vector dir = location.toVector().subtract(player.getEyeLocation().toVector()).normalize();
+        //return dir.dot(player.getEyeLocation().getDirection()) >= cosFOV;
+        return true;
     }
 
     @Override
